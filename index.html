@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Service</title>
+  <meta name="description" content="ATS-optimized resume writing, cover letters, LinkedIn makeovers, and interview strategy to land more interviews." />
+  <meta property="og:title" content="Resume Service" />
+  <meta property="og:description" content="ATS-optimized resumes, cover letters, LinkedIn profiles & interview strategies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/Frame 239.png" />
+  <meta name="theme-color" content="#ff003c" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ff003c',
+            primaryDark: '#d70032',
+            accent: '#00a588',
+            softPink: '#ffe1e6',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 0 6px rgba(255,0,60,0.15)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html{scroll-behavior:smooth;}
+    .underline-accent{background:linear-gradient(180deg,transparent 60%,#ffd6de 0)}
+    .hero-bg{background:linear-gradient(90deg,#ffd6de 0%,#ffe1e6 100%);}    
+    /* Focus styles */
+    :focus-visible{outline:3px solid #ff003c;outline-offset:3px;border-radius:4px}
+    /* Smooth underline curve container fix for overflow */
+    h1 svg{pointer-events:none}
+  /* (Removed hero image & stat cards) */
+    /* CTA Buttons refinements to match reference */
+  .btn-base{position:relative;display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:0.875rem;padding:0.75rem 1.85rem;border-radius:9999px;letter-spacing:0;transition:all .25s cubic-bezier(.4,0,.2,1);line-height:1;}
+  /* Outline (Resume Packages) */
+  .btn-outline{color:#ff003c;border:2px solid #ff003c;background:#ffffff;box-shadow:0 4px 16px -4px rgba(255,0,60,0.35);}    
+  .btn-outline:hover,.btn-outline:focus-visible{background:#ff003c;color:#fff;box-shadow:0 6px 22px -4px rgba(255,0,60,0.45);}    
+  /* Solid (Contact Us) */
+  .btn-solid{background:#ff003c;color:#fff;box-shadow:0 4px 18px -4px rgba(255,0,60,0.55);border:2px solid #ff003c;}
+  .btn-solid:hover,.btn-solid:focus-visible{background:#e60036;box-shadow:0 6px 24px -4px rgba(255,0,60,0.6);}  
+    /* Reduce motion preference */
+    @media (prefers-reduced-motion:reduce){.btn-base{transition:none}}
+    /* Slight enlargement for "What You Get" badge */
+    .badge-whatyouget{transform:scale(1.02);transform-origin:center;display:inline-block;}
+  </style>
+</head>
+<body class="font-sans text-[#1a1a1a] antialiased">
+  <a href="#mainContent" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:px-4 focus:py-2 focus:rounded-md focus:shadow">Skip to content</a>
+  <!-- Navbar -->
+  <header class="w-full fixed top-0 left-0 bg-white/95 backdrop-blur z-50 border-b border-gray-100" role="banner">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+      <div class="flex items-center gap-2">
+  <img src="assets/images/Frame_33-removebg-preview.png" alt="Company logo" class="h-[72px] w-auto object-contain" />
+      </div>
+      <nav aria-label="Primary" class="hidden md:flex items-center gap-10 text-sm font-medium">
+        <a href="#" class="text-primary font-semibold relative after:absolute after:-bottom-2 after:left-0 after:h-[3px] after:w-full after:bg-primary after:rounded-full">Home</a>
+        <a href="#about" class="hover:text-primary transition-colors">About Us</a>
+        <a href="#services" class="hover:text-primary transition-colors">Our Services</a>
+        <a href="#pricing" class="hover:text-primary transition-colors">Pricing</a>
+        <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+      </nav>
+      <button class="ml-6 bg-primary text-white text-sm font-semibold rounded-full px-7 py-3 shadow-glow hover:bg-primaryDark transition-colors focus-visible:shadow-glow">Get A Quote</button>
+      <button id="navToggle" aria-label="Toggle navigation" class="md:hidden ml-4 p-2 rounded-lg hover:bg-gray-100 focus-visible:bg-gray-100">
+        <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 px-6 pb-6 space-y-4 text-sm font-medium bg-white">
+      <a class="block pt-4 text-primary font-semibold" href="#">Home</a>
+      <a class="block" href="#about">About Us</a>
+      <a class="block" href="#services">Our Services</a>
+      <a class="block" href="#pricing">Pricing</a>
+      <a class="block" href="#faq">FAQ</a>
+      <button class="w-full bg-primary text-white text-sm font-semibold rounded-full px-7 py-3 shadow-glow hover:bg-primaryDark transition-colors">Get A Quote</button>
+    </div>
+  </header>
+  <main id="mainContent" tabindex="-1">
+    <!-- Hero -->
+    <section class="pt-32 pb-10 hero-bg relative overflow-hidden lg:min-h-[640px]">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-14 items-start lg:items-stretch">
+  <div class="h-full flex flex-col justify-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-tight max-w-[560px] flex flex-col gap-2 sm:gap-3 leading-tight">
+            <span>Your Resume</span>
+            <span class="flex flex-wrap items-end">
+              <span class="relative inline-block text-primary font-extrabold mr-3 pb-2">
+                <span class="relative z-10">Deserves A Yes</span>
+                <img src="assets/images/Group 4.png" alt="" aria-hidden="true" class="absolute left-0 bottom-0 w-full translate-y-[55%] pointer-events-none select-none z-0" />
+              </span>
+              <span class="pt-2 sm:pt-3">Let’s</span>
+            </span>
+            <span>Make It Happen</span>
+          </h1>
+          <p class="mt-9 text-[13px] sm:text-sm leading-[1.65] max-w-xl text-gray-700 font-medium tracking-[0.15px]">
+            If Your Resume Isn’t Getting Responses, It’s Time For An Upgrade. <br class="hidden md:block"/>Get An ATS-Optimized Resume Crafted By HR Experts To Help You <br class="hidden md:block"/>Land More Interviews. Our Resumes Are Designed To Get Your Foot <br class="hidden md:block"/>In The Door And Place Your Name At The Top Of The Shortlist.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-6">
+            <a href="#packages" class="btn-base btn-outline">RESUME PACKAGES</a>
+            <a href="#contact" class="btn-base btn-solid">CONTACT US</a>
+          </div>
+        </div>
+        <!-- Right Hero Illustration (anchored bottom on large screens) -->
+        <div class="mt-16 lg:mt-0 flex justify-center lg:justify-end items-end h-full">
+          <div class="relative w-[380px] md:w-[500px] lg:w-[600px] transform lg:translate-y-8 lg:translate-x-16 xl:translate-x-28 2xl:translate-x-40">
+            <!-- Base illustration -->
+            <img src="assets/images/Group 12.png" alt="Circular decorative illustration background" class="w-full h-auto drop-shadow-sm" />
+            <!-- Overlaid figure (Frame 239) aligned to left center of Group 12 -->
+            <img src="assets/images/Frame 239.png" alt="Student holding books and phone" class="absolute left-[-22%] md:left-[-24%] lg:left-[-26%] top-1/2 translate-y-[28%] w-[67%] md:w-[65%] lg:w-[63%] z-10 h-auto" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="py-24 bg-white" id="what-you-get">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="text-center">
+          <span class="badge-whatyouget text-[11px] font-semibold tracking-wide bg-[#ffe1e6] text-black px-4 py-1 rounded-md mb-6">What You Get</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight max-w-3xl mx-auto tracking-tight">You’re Not Just <span class="text-primary">Another Applicant</span> And Your <br class="hidden md:block"/>Resume Shouldn’t Look Like One</h2>
+        </div>
+  <div class="mt-14 grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <!-- Card 1 -->
+          <div class="group bg-white border border-gray-200 rounded-2xl px-12 pt-10 pb-8 flex flex-col items-center text-center shadow-[0_4px_18px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)] transition-all focus-within:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)]">
+            <div class="h-40 w-full flex items-start justify-center mb-6 overflow-visible">
+              <img src="assets/images/Frame 296 (2).png" loading="lazy" decoding="async" class="max-h-full w-auto group-hover:scale-[1.04] transition-transform" alt="Illustration" />
+            </div>
+            <h3 class="text-sm font-semibold leading-snug mb-2">A Resume Format That <br/>Gets You Interviews</h3>
+            <p class="text-[11px] text-gray-600 leading-relaxed font-medium">Get a professionally written, keyword-optimized resume that lands in recruiter inboxes.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="group bg-white border border-gray-200 rounded-2xl px-12 pt-10 pb-8 flex flex-col items-center text-center shadow-[0_4px_18px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)] transition-all focus-within:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)]">
+            <div class="h-40 w-full flex items-start justify-center mb-6 overflow-visible">
+              <img src="assets/images/Frame 296 (1).png" loading="lazy" decoding="async" class="max-h-full w-auto group-hover:scale-[1.04] transition-transform" alt="Illustration" />
+            </div>
+            <h3 class="text-sm font-semibold leading-snug mb-2">A Cover Letter Style That <br/>Stands Out Strong</h3>
+            <p class="text-[11px] text-gray-600 leading-relaxed font-medium">Stand out with a cover letter that speaks directly to the role and reflects your strengths.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="group bg-white border border-gray-200 rounded-2xl px-12 pt-10 pb-8 flex flex-col items-center text-center shadow-[0_4px_18px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)] transition-all focus-within:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)]">
+            <div class="h-40 w-full flex items-start justify-center mb-6 overflow-visible">
+              <img src="assets/images/Group 92.png" loading="lazy" decoding="async" class="max-h-full w-auto group-hover:scale-[1.04] transition-transform" alt="Illustration" />
+            </div>
+            <h3 class="text-sm font-semibold leading-snug mb-2">A LinkedIn Profile That <br/>Works For You</h3>
+            <p class="text-[11px] text-gray-600 leading-relaxed font-medium">Attract the right eyes, start conversations, and show up in recruiter searches.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="group bg-white border border-gray-200 rounded-2xl px-12 pt-10 pb-8 flex flex-col items-center text-center shadow-[0_4px_18px_-4px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)] transition-all focus-within:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)]">
+            <div class="h-40 w-full flex items-start justify-center mb-6 overflow-visible">
+              <img src="assets/images/Frame 296.png" loading="lazy" decoding="async" class="max-h-full w-auto group-hover:scale-[1.04] transition-transform" alt="Illustration" />
+            </div>
+            <h3 class="text-sm font-semibold leading-snug mb-2">An Interview Strategy That <br/>Builds Confidence</h3>
+            <p class="text-[11px] text-gray-600 leading-relaxed font-medium">Interview preparation with real HR professionals so you speak clearly confidently.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 text-center text-xs text-gray-500 border-t border-gray-100" role="contentinfo">© 2025 COMPANY. All rights reserved.</footer>
+
+  <script>
+    // Mobile nav toggle & accessibility adjustments
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Close mobile menu when focus leaves and ESC pressed
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && !mobileMenu.classList.contains('hidden')){
+        navToggle.click();
+        navToggle.focus();
+      }
+    });
+    // Removed old stat-card cleanup script to avoid MutationObserver errors.
+  </script>
+</body>
+</html>
